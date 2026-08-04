@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>
+AI Document Assistant
+</title>
+
+
+<link rel="stylesheet" href="./css/style.css">
+
+
+</head>
+
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+
+        🤖 AI Document Assistant
+
+    </div>
+
+
+    <div class="user-info">
+
+        <span id="username">
+
+            Guest
+
+        </span>
+
+
+        <button
+            id="logout-btn"
+            onclick="logout()">
+
+            Logout
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<div class="app">
+
+<button id="menu-toggle" class="menu-btn">
+    ☰
+</button>
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+
+<h2>
+🤖 AI Assistant
+</h2>
+
+
+
+<!-- Upload -->
+
+<div class="upload-box">
+
+<h3>
+Upload PDF
+</h3>
+
+
+<input
+type="file"
+id="pdf-file"
+accept="application/pdf"
+>
+
+
+<button onclick="uploadPDF()">
+Upload
+</button>
+
+
+</div>
+
+
+
+
+<h3>
+My Documents
+</h3>
+
+
+
+<div id="documents-list">
+
+</div>
+
+
+
+</aside>
+
+
+
+
+
+<!-- Main Content -->
+
+<main class="main">
+
+
+
+<!-- Login -->
+
+
+<div id="login-box">
+
+
+<h2>
+Login
+</h2>
+
+
+
+<input
+id="email"
+placeholder="Email"
+>
+
+
+
+<input
+id="password"
+type="password"
+placeholder="Password"
+>
+
+
+
+<button onclick="login()">
+
+Login
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- Chat -->
+
+
+<div id="chat-section" class="chat-container">
+
+
+    <div class="chat-header">
+
+        🤖 AI Chat
+
+    </div>
+
+
+
+    <div id="messages" class="messages">
+
+    </div>
+
+
+
+    <div class="chat-input">
+
+
+        <input
+
+        id="question"
+
+        placeholder="Ask about your PDF..."
+
+        >
+
+
+
+        <button onclick="sendMessage()">
+
+            Send
+
+        </button>
+
+
+    </div>
+
+
+
+</div>
+
+
+<h2>
+AI Chat
+</h2>
+
+
+
+<div id="messages">
+
+</div>
+
+
+
+
+
+<div class="chat-input">
+
+
+<input
+id="question"
+placeholder="Ask about your PDF..."
+>
+
+
+
+<button onclick="sendMessage()">
+
+Send
+
+</button>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+</main>
+
+
+
+</div>
+
+
+
+
+
+<script src="./js/api.js"></script>
+
+<script src="./js/auth.js"></script>
+
+<script src="./js/documents.js"></script>
+
+<script src="./js/chat.js"></script>
+
+<script src="./js/menu.js"></script>
+
+<script src="./js/upload.js"></script>
+
+
+
+</body>
+
+
+</html>
